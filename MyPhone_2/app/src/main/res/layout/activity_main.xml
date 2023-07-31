@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listaudio"
+        android:layout_width="422dp"
+        android:layout_height="206dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+
+    <!-- Add this ListView below the current ListView in your activity_main.xml -->
+
+    <!-- Add these buttons below the ListView in your activity_main.xml -->
+
+    <ListView
+        android:id="@+id/listDummyClips"
+        android:layout_width="412dp"
+        android:layout_height="209dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaudio" />
+
+    <!-- activity_main.xml -->
+
+    <!-- Add the missing view IDs here -->
+
+    <LinearLayout
+        android:id="@+id/dummyClipsLayout"
+        android:layout_width="413dp"
+        android:layout_height="185dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips">
+
+        <!-- Add the dummy clip titles here programmatically -->
+
+    </LinearLayout>
+
+    <!-- ... -->
+
+
+
+    <!-- ... -->
+
+    <!-- ... -->
+
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="58dp"
+        android:onClick="onEditButtonClick"
+        android:text="Edit"
+        app:layout_constraintEnd_toStartOf="@+id/chronometer"
+        app:layout_constraintTop_toBottomOf="@+id/dummyClipsLayout" />
+
+    <LinearLayout
+        android:id="@+id/audioClipContainer"
+        android:layout_width="416dp"
+        android:layout_height="185dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDummyClips">
+
+        <!-- Add the generated dummy audio clips here programmatically -->
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chronometer"
+        app:srcCompat="@drawable/play" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:contentDescription="TODO" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="87dp"
+        android:layout_height="47dp"
+        android:layout_above="@+id/playPause"
+        android:layout_marginEnd="58dp"
+        android:layout_toRightOf="@+id/btnEdit"
+        app:layout_constraintEnd_toStartOf="@+id/playPause"
+        app:layout_constraintTop_toTopOf="@+id/btnEdit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

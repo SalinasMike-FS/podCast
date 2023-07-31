@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyPhone</string>
+    <string name="selected_dummy_audio_clip_title">Selected Dummy Audio Clip Title</string>
+    <string name="trim_start">Trim Start</string>
+</resources>
